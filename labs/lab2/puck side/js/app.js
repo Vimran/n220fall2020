@@ -1,9 +1,3 @@
-let x = 0;
-function draw(){
-    x = x + 1;
-    console.log(x);
-}
-
 function setup(){
     createCanvas(400,300);
 }
@@ -16,4 +10,3 @@ function draw(){
     }
     ellipse(mouseX, mouseY, 20, 20);
  }
-
