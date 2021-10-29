@@ -1,9 +1,10 @@
 let guess = document.getElementById("guess");
 let dvResult = document.getElementById("dvResult");
+var x = Math.floor(Math.random() * 20 + 1);
+
 
 function guessNumber(){
     let y = guess.value;
-    var x = Math.floor(Math.random() * 20 + 1);
     if(y == x){
         dvResult.innerHTML = "Correct";
     } else if ( y < x ){
@@ -14,3 +15,4 @@ function guessNumber(){
     guess.value = "";
     
 }
+
