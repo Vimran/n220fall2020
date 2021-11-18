@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #buttons{
+            width: 250px;
+            margin: 10px;
+            text-align: center;
+        }
+        button{
+            margin: 5px;
+            width: 100px;
+            height: 25px;
+            text-align: center;
+        }
+        #currentColor{
+            height: 40px;
+            width: 500px;
+            margin: 20px auto;
+            border: 1px solid black;
+            text-align: center;
+            line-height: 2px;
+        }
+        #colorDisplay{
+            height: 200px;
+            width: 70%;
+            margin: 20px auto;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="colorDisplay"></div>
+    <div id="currentColor">
+        <h2>Current Color:rgb(<span id="rgbValue"></span>)</h2>
+    </div>
+    <div id="buttons">
+        <table>
+            <tr>
+                <td>Red:</td>
+                <td><button onclick="redOne()">+1</button></td>
+                <td><button onclick="redFive()">+5</button></td>
+                <td><button onclick="redTen()">+10</button></td>
+            </tr>
+            <tr>
+                <td>Green:</td>
+                <td><button onclick="greenOne()">+1</button></td>
+                <td><button onclick="greenFive()">+5</button></td>
+                <td><button onclick="greenTen()">+10</button></td>
+            </tr>
+            <tr>
+                <td>Blue:</td>
+                <td><button onclick="blueOne()">+1</button></td>
+                <td><button onclick="blueFive()">+5</button></td>
+                <td><button onclick="blueTen()">+10</button></td>
+            </tr>
+        </table>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
