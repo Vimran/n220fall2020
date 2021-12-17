@@ -1,4 +1,4 @@
-const displayStatus = document.getElementById(displayStatus);
+let displayStatus = document.getElementById(displayStatus);
 let currentlyPlaying = true;
 let currentPlayer = "X";
 let gameStatus = ["", "", "", "", "", "", "", "", ""];
@@ -6,7 +6,7 @@ let txtWinner = "Player" + currentPlayer + "is the winner";
 const txtTie = "It's a tie!";
 let currentTurn = "It's" + currentPlayer + " 's turn";
 displayStatus.innerHTML = currentTurn();
-const winnings = [
+const winnings = [ /** these are the indexes that need to be populated in order to be the winner. The second resource helped me visualize this as it is a bit confusing to explain in words */
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -17,7 +17,7 @@ const winnings = [
   [2, 4, 6]
 ]
 
-function playCell(clickCell, clickCellIndex){
+function playCell(clickCell, clickCellIndex){ /** updates game with the move */
   gameStatus[clickCellIndex] = currentPlayer;
   clickCell.innerHTML = currentPlayer;
 }
@@ -55,8 +55,8 @@ function result(){
 }
 function clickCell(clickCellEvent){
   let clickCell = clickCellEvent.target;
-  const clickCellIndex = parseInt(clickCell.getAttribute('id'));
-  if (gameStatus[clickCellIndex] !== "" || !currentlyPlaying){
+  const clickCellIndex = parseInt(clickCell.getAttribute('id')); /** getAttribute returns a string value. Here it is getting the id for the clicked cell */
+  if (gameStatus[clickCellIndex] !== "" || !currentlyPlaying){ /** check if the call has been played */
     return;
   }
   playCell(clickCell, clickCellIndex);
@@ -70,5 +70,5 @@ function restartGame(){
   document.querySelectorAll('grid')
     .forEach(grid => grid.innerHTML = "");
 }
-
+/*** got this line of code from the resource it is an event listener for clicking on the grid */
 document.querySelectorAll('grid').forEach(grid => grid.addEventListener('click', clickCell));

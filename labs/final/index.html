@@ -10,7 +10,7 @@
         width: 100px;
         margin: 50px auto;
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, auto); /** got this bit from the first link. It essentially takes the 9 divs made below and splits them into 3 columns and lets the divs automatically decide their width**/
         text-align: center;
     }
     .grid {
@@ -36,7 +36,7 @@
         <div id="8" class="grid"></div>
     </div> 
     <h2 class="displayStatus"></h2>
-    <button class="restartGame">Restart Game</button> 
+    <button onclick="restartGame()">Restart Game</button> 
 
    
 
